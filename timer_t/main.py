@@ -14,6 +14,7 @@ class test_app(QtWidgets.QMainWindow,Ui_MainWindow):
     def __init__(self):
         super().__init__()
         self.q=self.s.q
+        self._rotate=10
         self.setupUi(self)
         self.scen_x=QtWidgets.QGraphicsScene()
         self.scen_y=QtWidgets.QGraphicsScene()
@@ -34,8 +35,10 @@ class test_app(QtWidgets.QMainWindow,Ui_MainWindow):
         [i.addRect(0,0,self.yz.width()*2,2,brush=QBrush(QtCore.Qt.yellow),pen=QPen(QtCore.Qt.darkYellow)) for i in self.scen]
 
 
+        self.handle = QtCore.QThread()
+        #self.receiver = MessageReceiver(queue)
         self.ok.clicked.connect(self.start_t)
-        self.end.clicked.connect(self.close_t)
+        #self.end.clicked.connect(self.close_t)
         self.o_l=[float(0),float(0),float(0)]
 
     def start_t(self):
@@ -44,7 +47,7 @@ class test_app(QtWidgets.QMainWindow,Ui_MainWindow):
 
         self._status_update_timer = QtCore.QTimer(self)
         self._status_update_timer.setSingleShot(False)
-        self._status_update_timer.timeout.connect(lambda: self.graf_update)
+        self._status_update_timer.timeout.connect(lambda: self.graf_update())
         self._status_update_timer.start(10)
 
         return 1

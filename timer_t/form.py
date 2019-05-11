@@ -8,11 +8,10 @@
 
 from PyQt5 import QtCore, QtGui, QtWidgets
 
-
 class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
         MainWindow.setObjectName("MainWindow")
-        MainWindow.resize(400, 240)
+        MainWindow.resize(400, 479)
         self.centralwidget = QtWidgets.QWidget(MainWindow)
         self.centralwidget.setObjectName("centralwidget")
         self.verticalLayout = QtWidgets.QVBoxLayout(self.centralwidget)
@@ -23,15 +22,32 @@ class Ui_MainWindow(object):
         self.gridLayout.setObjectName("gridLayout")
         self.xy = QtWidgets.QGraphicsView(self.groupBox_2)
         self.xy.setObjectName("xy")
-        self.gridLayout.addWidget(self.xy, 0, 0, 1, 1)
+        self.gridLayout.addWidget(self.xy, 4, 0, 1, 1)
         self.yz = QtWidgets.QGraphicsView(self.groupBox_2)
         self.yz.setObjectName("yz")
-        self.gridLayout.addWidget(self.yz, 0, 2, 1, 1)
+        self.gridLayout.addWidget(self.yz, 4, 2, 1, 1)
         self.xz = QtWidgets.QGraphicsView(self.groupBox_2)
+        self.xz.setAcceptDrops(False)
+        self.xz.setToolTip("")
         self.xz.setObjectName("xz")
-        self.gridLayout.addWidget(self.xz, 0, 1, 1, 1)
+        self.gridLayout.addWidget(self.xz, 4, 1, 1, 1)
+        self.label_3 = QtWidgets.QLabel(self.groupBox_2)
+        self.label_3.setTextFormat(QtCore.Qt.AutoText)
+        self.label_3.setScaledContents(False)
+        self.label_3.setAlignment(QtCore.Qt.AlignCenter)
+        self.label_3.setObjectName("label_3")
+        self.gridLayout.addWidget(self.label_3, 5, 0, 1, 1)
+        self.label_2 = QtWidgets.QLabel(self.groupBox_2)
+        self.label_2.setAlignment(QtCore.Qt.AlignCenter)
+        self.label_2.setObjectName("label_2")
+        self.gridLayout.addWidget(self.label_2, 5, 1, 1, 1)
+        self.label = QtWidgets.QLabel(self.groupBox_2)
+        self.label.setAlignment(QtCore.Qt.AlignCenter)
+        self.label.setObjectName("label")
+        self.gridLayout.addWidget(self.label, 5, 2, 1, 1)
         self.verticalLayout.addWidget(self.groupBox_2)
         self.groupBox = QtWidgets.QGroupBox(self.centralwidget)
+        self.groupBox.setTitle("")
         self.groupBox.setObjectName("groupBox")
         self.horizontalLayout_2 = QtWidgets.QHBoxLayout(self.groupBox)
         self.horizontalLayout_2.setObjectName("horizontalLayout_2")
@@ -53,9 +69,11 @@ class Ui_MainWindow(object):
     def retranslateUi(self, MainWindow):
         _translate = QtCore.QCoreApplication.translate
         MainWindow.setWindowTitle(_translate("MainWindow", "MainWindow"))
-        self.groupBox_2.setTitle(_translate("MainWindow", "GroupBox"))
-        self.groupBox.setTitle(_translate("MainWindow", "GroupBox"))
-        self.ok.setText(_translate("MainWindow", "ok"))
+        self.groupBox_2.setTitle(_translate("MainWindow", "область графиков"))
+        self.label_3.setText(_translate("MainWindow", "yaw"))
+        self.label_2.setText(_translate("MainWindow", "pitch"))
+        self.label.setText(_translate("MainWindow", "roll"))
+        self.ok.setText(_translate("MainWindow", "start"))
         self.end.setText(_translate("MainWindow", "end"))
 
 
