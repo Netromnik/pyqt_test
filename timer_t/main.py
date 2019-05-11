@@ -29,10 +29,10 @@ class test_app(QtWidgets.QMainWindow,Ui_MainWindow):
         self.scen=[self.scen_x,self.scen_y,self.scen_z]
 
         #creat elipse
-        [i.addEllipse(0,-100, self.yz.width()*2, self.yz.width()*2) for i in self.scen]
+        [i.addEllipse(0,-150, self.yz.width()*3, self.yz.width()*3,brush=QBrush(QtCore.Qt.darkRed),pen=QPen(QtCore.Qt.white)) for i in self.scen]
 
         #creat polka
-        [i.addRect(0,0,self.yz.width()*2,2,brush=QBrush(QtCore.Qt.yellow),pen=QPen(QtCore.Qt.darkYellow)) for i in self.scen]
+        [i.addRect(0,0,self.yz.width()*3,4,brush=QBrush(QtCore.Qt.yellow),pen=QPen(QtCore.Qt.darkYellow)) for i in self.scen]
 
 
         self.handle = QtCore.QThread()
