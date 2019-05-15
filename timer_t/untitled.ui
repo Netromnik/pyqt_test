@@ -16,27 +16,28 @@
   <widget class="QWidget" name="centralwidget">
    <layout class="QVBoxLayout" name="verticalLayout">
     <item>
+     <widget class="QScrollArea" name="scrollArea">
+      <property name="widgetResizable">
+       <bool>true</bool>
+      </property>
+      <widget class="QWidget" name="scrollAreaWidgetContents">
+       <property name="geometry">
+        <rect>
+         <x>0</x>
+         <y>0</y>
+         <width>384</width>
+         <height>110</height>
+        </rect>
+       </property>
+      </widget>
+     </widget>
+    </item>
+    <item>
      <widget class="QGroupBox" name="groupBox_2">
       <property name="title">
        <string>область графиков</string>
       </property>
       <layout class="QGridLayout" name="gridLayout">
-       <item row="4" column="0">
-        <widget class="QGraphicsView" name="xy"/>
-       </item>
-       <item row="4" column="2">
-        <widget class="QGraphicsView" name="yz"/>
-       </item>
-       <item row="4" column="1">
-        <widget class="QGraphicsView" name="xz">
-         <property name="acceptDrops">
-          <bool>false</bool>
-         </property>
-         <property name="toolTip">
-          <string extracomment="xz"/>
-         </property>
-        </widget>
-       </item>
        <item row="5" column="0">
         <widget class="QLabel" name="label_3">
          <property name="text">
@@ -56,6 +57,19 @@
          </property>
         </widget>
        </item>
+       <item row="5" column="2">
+        <widget class="QLabel" name="label">
+         <property name="text">
+          <string>roll</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignCenter</set>
+         </property>
+        </widget>
+       </item>
+       <item row="4" column="2">
+        <widget class="QGraphicsView" name="yz"/>
+       </item>
        <item row="5" column="1">
         <widget class="QLabel" name="label_2">
          <property name="text">
@@ -66,13 +80,16 @@
          </property>
         </widget>
        </item>
-       <item row="5" column="2">
-        <widget class="QLabel" name="label">
-         <property name="text">
-          <string>roll</string>
+       <item row="4" column="0">
+        <widget class="QGraphicsView" name="xy"/>
+       </item>
+       <item row="4" column="1">
+        <widget class="QGraphicsView" name="xz">
+         <property name="acceptDrops">
+          <bool>false</bool>
          </property>
-         <property name="alignment">
-          <set>Qt::AlignCenter</set>
+         <property name="toolTip">
+          <string extracomment="xz"/>
          </property>
         </widget>
        </item>
