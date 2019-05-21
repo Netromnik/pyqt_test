@@ -4,11 +4,14 @@ from PyQt5.QtGui import QPainter, QBrush, QPen
 from PyQt5 import Qt3DCore ,Qt3DAnimation ,Qt3DExtras
 from form import  Ui_MainWindow
 from serv import  server
-from multiprocessing import Process ,Queue
+from multiprocessing import Process ,Queue ,Pool
 from  O3d import GLWidget
+from plotter import canva_Mat as canva_Mat
+import random
 class test_app(QtWidgets.QMainWindow,Ui_MainWindow):
     s = server()
     q=Queue()
+
     def __init__(self):
         super().__init__()
         self.q=self.s.q
@@ -26,15 +29,17 @@ class test_app(QtWidgets.QMainWindow,Ui_MainWindow):
         self.glWidget = GLWidget()
         self.scrollArea.setWidget(self.glWidget)#this 3D
 
+        self.sc = canva_Mat(self.centralwidget)
+        self.Gr.addWidget(self.sc, 0, 1, 1, 1)
 
         self.Gra_V= [self.xy, self.yz, self.xz]
         self.scen=[self.scen_x,self.scen_y,self.scen_z]
         #creat elipse
-        [i.addEllipse(0,-150, self.yz.width()*3, self.yz.width()*3,brush=QBrush(QtCore.Qt.darkRed),pen=QPen(QtCore.Qt.white)) for i in self.scen]
+        [i.addEllipse(0,-50, self.yz.width()-2, self.yz.width(),brush=QBrush(QtCore.Qt.darkRed),pen=QPen(QtCore.Qt.white)) for i in self.scen]
         [i.addEllipse(-10,-8, self.yz.width()/5, self.yz.width()/5,brush=QBrush(QtCore.Qt.darkYellow),pen=QPen(QtCore.Qt.green)) for i in self.scen]
 
         #creat polka
-        [i.addRect(0,0,self.yz.width()*3,4,brush=QBrush(QtCore.Qt.yellow),pen=QPen(QtCore.Qt.darkYellow)) for i in self.scen]
+        [i.addRect(0,0,self.yz.width(),4,brush=QBrush(QtCore.Qt.yellow),pen=QPen(QtCore.Qt.darkYellow)) for i in self.scen]
 
 
         self.handle = QtCore.QThread()
@@ -61,20 +66,32 @@ class test_app(QtWidgets.QMainWindow,Ui_MainWindow):
     def graf_update(self):
         if not self.q.empty():
             l = self.q.get()
-            self.xy.rotate(self.o_l[0] - l[0])
-            self.xz.rotate(self.o_l[1] - l[1])
-            self.yz.rotate(self.o_l[2] - l[2])
-            [i.update() for i in self.Gra_V]
+            self.sc.setDate(l[0], l[1], l[2])
+
+            if (self.tabWidget.currentWidget() == self.tab):
+
+                self.xy.rotate(self.o_l[0] - l[0])
+                self.xz.rotate(self.o_l[1] - l[1])
+                self.yz.rotate(self.o_l[2] - l[2])
+
+
+                self.label_3.setText("yaw::"+str(l[0]))
+                self.label_2.setText("pitch::"+str(l[1]))
+                self.label.setText("roll::"+str(l[2]))
+
+                #3D scen
+
+                self.glWidget.setXRotation(l[1])
+                self.glWidget.setYRotation(l[2])
+                self.glWidget.setZRotation(l[0])
+                self.glWidget.update()
+
+            if (self.tabWidget.currentWidget() == self.tab_2):
+                self.sc.paint()
+
             self.o_l = l
-            self.label_3.setText("yaw::"+str(l[0]))
-            self.label_2.setText("pitch::"+str(l[1]))
-            self.label.setText("roll::"+str(l[2]))
-
-            self.rot = i
-            self.glWidget.update()
-            print(i)
-
-
+        else:
+            self.s.__init__()
 if __name__ == "__main__":
     import sys
     app=QtWidgets.QApplication(sys.argv)

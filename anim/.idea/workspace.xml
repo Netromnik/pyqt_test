@@ -1,7 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="993a309b-019d-4e93-9098-5a29963836f1" name="Default Changelist" comment="" />
+    <list default="true" id="993a309b-019d-4e93-9098-5a29963836f1" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../matplot/newplot.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../pyqt3d/.idea/pyqt3d.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../pyqt3d/main.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../timer_t/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../timer_t/O3d.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../timer_t/plotter.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../timer_t/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../timer_t/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../timer_t/form.py" beforeDir="false" afterPath="$PROJECT_DIR$/../timer_t/form.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../timer_t/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/../timer_t/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../timer_t/untitled.ui" beforeDir="false" afterPath="$PROJECT_DIR$/../timer_t/untitled.ui" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../worker/simple_thread.py" beforeDir="false" afterPath="$PROJECT_DIR$/../worker/simple_thread.py" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -16,8 +31,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/main.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1335">
-              <caret line="89" lean-forward="true" selection-start-line="89" selection-end-line="93" selection-end-column="53" />
+            <state relative-caret-position="-945">
+              <caret line="60" selection-start-line="60" selection-end-line="60" />
               <folding>
                 <element signature="e#1#134#0" expanded="true" />
               </folding>
@@ -41,6 +56,9 @@
       <find>Q</find>
     </findStrings>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
@@ -59,11 +77,13 @@
     <option name="width" value="910" />
     <option name="height" value="476" />
   </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -75,10 +95,10 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../worker/ma.py" />
   </component>
   <component name="RunDashboard">
@@ -93,28 +113,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.hren">
-    <configuration name="form" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="anim" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/form.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
+  <component name="RunManager" selected="Python.main (1)">
     <configuration name="hren" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="anim" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -149,6 +148,27 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="SCRIPT_NAME" value="$USER_HOME$/qt/Computer-graphics/lab10/lab10.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="main (1)" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="anim" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/main.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -201,11 +221,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.main (1)" />
         <item itemvalue="Python.hren" />
         <item itemvalue="Python.my_main" />
         <item itemvalue="Python.main" />
         <item itemvalue="Python.lab10" />
-        <item itemvalue="Python.form" />
       </list>
     </recent_temporary>
   </component>
@@ -229,12 +249,12 @@
     <frame x="-7" y="16" width="1380" height="732" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.43365696" visible="true" weight="0.16232316" />
-      <window_info id="Structure" order="1" sideWeight="0.56634307" side_tool="true" visible="true" weight="0.16232316" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.4301948" visible="true" weight="0.16232316" />
+      <window_info id="Structure" order="1" sideWeight="0.5698052" side_tool="true" visible="true" weight="0.16232316" />
       <window_info id="Favorites" order="2" sideWeight="0.5013477" side_tool="true" weight="0.16232316" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.21682848" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.2159091" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39967638" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -355,8 +375,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/main.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1335">
-          <caret line="89" lean-forward="true" selection-start-line="89" selection-end-line="93" selection-end-column="53" />
+        <state relative-caret-position="-945">
+          <caret line="60" selection-start-line="60" selection-end-line="60" />
           <folding>
             <element signature="e#1#134#0" expanded="true" />
           </folding>
